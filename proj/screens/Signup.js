@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, TouchableOpacity, Text, Image, Pressable, Modal, StyleSheet } from "react-native";
+import { View, TextInput, TouchableOpacity, Text, Image, Pressable, Modal, ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import Checkbox from "expo-checkbox";
@@ -79,16 +79,104 @@ const Signup = ({ navigation }) => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>TERMS AND CONDITIONS</Text>
-            <Text style={{ fontSize: 14, fontWeight: "medium", lineHeight: 20 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-              in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </Text>
-            <Pressable style={[styles.button, styles.buttonClose]} onPress={() => setModalShow(false)}>
-              <Text style={styles.textStyle}>Close</Text>
-            </Pressable>
+            <ScrollView style={{ height: "80%" }}>
+              <Text style={styles.modalText}>TERMS AND CONDITIONS</Text>
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>Welcome</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                Welcome to Da Source! These terms and conditions outline the rules and regulations for the use of our application. By accessing this
+                app, we assume you accept these terms and conditions. Do not continue to use Da Source] if you do not agree to all of the terms and
+                conditions stated on this page.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>License to Use:</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                We grant you a limited, non-exclusive, non-transferable, and revocable license to use the app for personal, non-commercial use. You
+                must not:
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                Republish material from the app Sell, rent, or sub-license material from the app Reproduce, duplicate, or copy material from the app
+                Redistribute content from the app
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>User Accounts</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                To access certain features of the app, you may be required to create an account and provide specific information. You agree to provide
+                accurate, current, and complete information during the registration process.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                You are responsible for maintaining the confidentiality of your account and password and for restricting access to your device. You
+                agree to accept responsibility for all activities that occur under your account.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>User Content</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                The app allows you to post, link, store, share, and otherwise make available certain information, text, graphics, videos, or other
+                material (“User Content”). You are responsible for the User Content that you post on or through the app.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                By posting User Content, you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and
+                distribute such User Content on and through the app.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>Prohibited Activities</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                You agree not to use the app for any purpose that is unlawful or prohibited by these terms. Prohibited activities include, but are not
+                limited to:
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                Violating any local, state, national, or international law Hacking or interfering with the proper functioning of the app Using the app
+                to transmit any harmful or malicious code
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                Purchases; If you wish to purchase any product or service made available through the app (“Purchase”), you may be asked to supply
+                certain information relevant to your Purchase including, without limitation, your credit card number, the expiration date of your
+                credit card, your billing address, and your shipping information.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                You represent and warrant that you have the legal right to use any credit card(s) or other payment methods in connection with any
+                Purchase and that the information you supply is true, correct, and complete.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>Returns and Refunds Policy</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                Please review our [Returns and Refunds Policy] for detailed information on our policies regarding returns and refunds.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>Intellectual Property</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                The app and its original content, features, and functionality are and will remain the exclusive property of Da Source and its
+                licensors.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                The app is protected by copyright, trademark, and other laws of both the country and foreign countries. Our trademarks and trade dress
+                may not be used in connection with any product or service without the prior written consent of Da Source.
+              </Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>Termination</Text>
+
+              <Text style={{ fontSize: 14, fontWeight: "medium", marginBottom: 15 }}>
+                We may terminate or suspend your account and bar access to the app immediately, without prior notice or liability, under our sole
+                discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the terms.
+              </Text>
+
+              <Pressable style={[styles.button, styles.buttonClose]} onPress={() => setModalShow(false)}>
+                <Text style={styles.textStyle}>Close</Text>
+              </Pressable>
+            </ScrollView>
           </View>
         </View>
       </Modal>
