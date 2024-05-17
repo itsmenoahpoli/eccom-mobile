@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import { Camera } from "expo-camera";
 
-const ImageClassifierScreen = () => {
+const ImageClassifierScreen = ({ navigation }) => {
   // const [cameraPermission, setCameraPermission] = useState(null);
 
   // useEffect(() => {
@@ -22,6 +22,11 @@ const ImageClassifierScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Camera</Text>
+      <Pressable>
+        <Text style={styles.goBack} onPress={() => navigation.goBack()}>
+          Go Back
+        </Text>
+      </Pressable>
     </View>
   );
 };
@@ -32,6 +37,11 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
+  },
+  goBack: {
+    color: "blue",
+    textDecorationLine: 1,
+    marginTop: 20,
   },
   camera: {
     flex: 1,
